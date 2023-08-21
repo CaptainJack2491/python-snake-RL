@@ -1,0 +1,3 @@
+- print grid
+- snake movement
+    - need a way to move snake of a given length
