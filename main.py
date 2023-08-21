@@ -2,7 +2,6 @@ import random
 
 
 def generate_grid():
-    random_pos = (random.randint(1,9), random.randint(1,9))
     main_grid = [['s','_','_','_','_','_','_','_','_','_'],
                 ['_','_','_','_','_','_','_','_','_','_'],
                 ['_','_','_','_','_','_','_','_','_','_'],
@@ -13,9 +12,6 @@ def generate_grid():
                 ['_','_','_','_','_','_','_','_','_','_'],
                 ['_','_','_','_','_','_','_','_','_','_'],
                 ['_','_','_','_','_','_','_','_','_','_']]
-    
-    main_grid[random_pos[0]][random_pos[1]] = 'f'
-
     return main_grid
 
 
@@ -61,7 +57,14 @@ def move(direction, grid):
                     return grid
     return grid       
 
-main_grid = generate_grid()
+
+def spawn_food(grid):
+    random_pos = (random.randint(1,9), random.randint(1,9))
+    grid[random_pos[0]][random_pos[1]] = 'f'
+
+    return grid
+
+main_grid = spawn_food(generate_grid())
 
 for i in main_grid:
     print(i)

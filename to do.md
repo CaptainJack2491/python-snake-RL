@@ -1,3 +1,7 @@
-- print grid
+- print grid                                                        done
 - snake movement
-    - need a way to move snake of a given length
+    - have to add length
+- food spawing
+    - randomly spawn food                                           done
+    - del food and add to score when the food is eaten
+    - spawn new food
